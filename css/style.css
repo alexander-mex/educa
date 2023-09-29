@@ -1,0 +1,493 @@
+*{margin:0; 
+  padding:0; 
+  box-sizing:border-box;
+  transition:all .3s linear;
+}
+
+html{
+  font-size:10px;
+}
+
+.header{
+  position:sticky;
+  top:0;
+  left:0;
+  right:0;
+  padding:2rem 0 3rem;
+  background:rgba(255, 255, 255, 0.85);
+  z-index:1000;
+  display:flex;
+}
+
+header .logo{
+  font-size:2.5rem;
+  color:#192252;
+  text-decoration:none;
+  font-weight:600;
+  font-family:"Montserrat", sans-serif;
+  margin-right:auto;
+}
+
+header .logo i{
+  color:#0EB582;
+}
+
+header .navbar{
+  position:relative;
+  right:12rem;
+}
+
+#close-navbar{
+  position:absolute;
+  background:rgba(0, 0, 0, 0.85);
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index:1100;
+  display:none;
+}
+
+#close-navbar.active{
+  display:block;
+}
+
+/* header .navbar{
+  position:absolute;
+  top:2rem;
+  right:10rem;
+  cursor:pointer;
+} */
+
+header .navbar a{
+  color:#192252;
+  margin-right:4.2rem;
+  text-decoration:none;
+  text-transform:capitalize;
+  font-weight:500;
+  font-family:"Inter", sans-serif;
+  font-size:2rem;
+}
+
+header .navbar a:hover{
+  color:#0EB582;
+  text-decoration:underline;
+}
+
+header .icons div{
+  cursor:pointer;
+  font-size:2.5rem;
+  color:#000;
+  position:absolute;
+  right:7.5rem;
+}
+
+header .icons div:hover{
+  color:#0EB582;
+}
+
+/* FORM */
+.account-form{
+  position:fixed;
+  top:0;
+  right:-100%;
+  /* right:0%; */
+  width:40rem;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1.5rem;
+  height:100%;
+  z-index:1111;
+  text-align:center;
+  padding:2rem;
+}
+
+.account-form #close-form{
+  position:absolute;
+  top:2.7rem;
+  right:2.2rem;
+  font-size:3rem;
+  cursor:pointer;
+  color:#000;
+}
+
+.account-form #close-form:hover{
+  transform:rotate(90deg);
+  transition:all .3s linear;
+}
+
+.account-form form{
+  border:1px solid #0EB582;
+  border-radius:5px;
+  padding:1.5rem;
+  display:none;
+}
+
+.account-form form.active{
+  display:block;
+}
+
+.account-form form h3{
+  font-family:"Montserrat", sans-serif;
+  font-size:2.5rem;
+  font-weight:600;
+  color:#444;
+  text-transform:uppercase;
+  margin-bottom:1.5rem;
+}
+
+.account-form form .box{
+  width:100%;
+  border:1px solid #0EB582;
+  border-radius:5px;
+  padding:1.2rem 1.5rem;
+  margin-bottom:1rem;
+  font-size:1.6rem;
+  color:#777;
+  font-family:"Nunito", sans-serif;
+}
+
+.account-form .form-info{
+  display:flex;
+  justify-content:space-between;
+}
+
+.account-form .form-info input{
+  border:1px solid #0EB582;
+
+}
+
+.account-form .form-info label, .account-form .form-info a{
+  font-family:"Nunito", sans-serif;
+  color:#777;
+  font-size:1.5rem;
+}
+
+.account-form .form-info a{
+  text-decoration:none;
+}
+
+.account-form .form-info a:hover{
+  text-decoration:underline;
+}
+
+.btn{
+  border:1px solid #0EB582;
+  border-radius:5px;
+  background-color:#F0FDFA;
+  padding:1.2rem 1.5rem;
+  margin-top:1rem;
+  font-size:1.6rem;
+  color:#0EB582;
+  font-family:"Nunito", sans-serif;
+  cursor:pointer;
+}
+
+.btn:hover{
+  background-color:#0EB582;  
+  color:#FFF;
+}
+
+.account-form.active{
+  right:0;
+}
+
+.account-form .buttons{
+  width:100%;
+  display:flex;
+  justify-content:space-evenly;
+}
+
+/* SWIPER */
+.home .slide{
+  display:flex;
+  height:60rem;
+  background-size:cover !important;
+  background-position:center !important;
+}
+
+.home .slide .content{
+  width:50rem;
+  font-family:"Inter", sans-serif;
+  color:#fff;
+}
+
+.home .slide .content h3{
+  font-size:5rem;
+  text-transform:capitalize;
+}
+
+.home .slide .content p{
+  font-size:1.6rem;
+  font-weight:500;
+  line-height:2;
+  margin:2.5rem 0;
+}
+
+.home .slide .content a{
+  text-decoration:none;
+  text-transform:uppercase;
+  color:#0EB582;
+  font-weight:500;
+  font-size:2.4rem;
+  display:inline-block;
+  padding:2.4rem 3.2rem;
+  background:#F0FDFA;
+  border-radius:5px;
+}
+
+.home .slide .content a:hover{
+  background:#0EB582;
+  color:#F0FDFA;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background-color:#0EB582;
+  border:1px solid #0EB582;
+}
+
+.swiper-pagination-bullet{
+  width:10px;
+  height:10px;
+  background-color:#666666;
+  border:1px solid #D3D3D3;
+}
+
+/* SUBJECTS */
+.subjects{
+  text-align:center;
+  padding:20px 20px 30px;
+}
+
+.subjects h1{
+  color:#444;
+  font-weight:500;
+  font-family:"Inter", sans-serif;
+  font-size:3.5rem;
+  margin-bottom: 5rem;
+}
+
+.subjects .box-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(24rem, 1fr));
+  grid-template-rows:repeat(auto-fit, 24rem);
+  gap:2.8rem;
+}
+
+.subjects .box-container .box{
+  border:1px solid #0EB582;
+  border-radius:5px;
+  padding:2.6rem 7rem 3.3rem;
+  font-family:"Nunito", sans-serif;
+  cursor:pointer;
+}
+
+.subjects .box-container .box:hover{
+  background:#0eb582;
+}
+
+.subjects .box-container .box:hover h3{
+  color:#fff;
+}
+
+
+.subjects .box-container .box:hover p{
+  color:#eee;
+}
+
+.subjects .box-container .box img{
+  height:10rem;
+  margin-bottom:2.4rem;
+}
+
+.subjects .box-container .box h3{
+  color:#444;
+  font-size:1.7rem;
+  font-weight:400;
+  margin-bottom:1.4rem;
+}
+
+.subjects .box-container p{
+  color:#777;
+  font-size:1.5rem;
+}
+
+/* POPULAR COURSES */
+
+.home-courses{
+  width:98%;
+  margin:0 auto;
+  padding-bottom:5.5rem;
+}
+
+.home-courses h1{
+  color:#444;
+  text-align:center;
+  margin-bottom:2.7rem;
+  font-family:"Inter", sans-serif;
+  font-size:3.5rem;
+}
+
+.home-courses .slide{
+  display:flex;
+  height:50rem;
+  background-size:cover !important;
+  background-position:center !important;
+}
+
+.home-courses .slide .image{
+  width:50rem;
+  font-family:"Inter", sans-serif;
+  color:#fff;
+}
+
+.home-courses .slide{
+  text-align:center;
+  position:relative;
+  background:#f0fdfa;
+  overflow:hidden;
+  border-radius:5px;
+}
+
+.home-courses .slide:hover .content{
+  bottom:0;
+}
+
+.home-courses .slide .image{
+  padding:2.5rem;
+  margin:0 auto;
+}
+
+.home-courses .slide .image img{
+  width:100%;
+  margin-bottom:1.5rem;
+}
+
+.home-courses .slide .image h3{
+  font-size:2rem;
+  text-transform:capitalize;
+  color:#444;
+}
+
+.home-courses .slide .content{
+  position:absolute;
+  bottom:-100%;
+  right:0;
+  left:0;
+  background:#0eb582;
+  padding:2rem 3rem;
+} 
+
+.home-courses .slide .content h3{
+  font-size:2rem;
+  text-transform:capitalize;
+  color:#fff;
+}
+
+.home-courses .slide .content p{
+  padding:1rem 0;
+  font-size:1.5rem;
+  line-height:2;
+  color:#eee;
+  margin-bottom:.5rem;
+}
+
+.home-courses .slide .content .btn{
+  text-decoration:none;
+}
+
+.home-courses .slide .content .btn:hover{
+  background:#444;
+}
+
+/* FOOTER */
+footer{
+  background:#f0fdfa;
+}
+
+footer .box-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(25rem, 1fr));
+  gap:2rem;
+  width:98%;
+  margin:0 auto;
+}
+
+footer .box-container .box h3{
+  font-size:2.2rem;
+  text-transform:capitalize;
+  color:#444;
+  padding:1rem 0;
+  font-weight:600;
+}
+
+footer .box-container .box h3 i{
+  color:#0eb582;
+}
+
+footer .box-container .box .share{
+  margin-top:1rem;
+}
+
+footer .box-container .box a{
+  text-decoration:none;
+}
+
+footer .box-container .box .share a{
+  height:4.5rem;
+  width:4.5rem;
+  line-height:4.5rem;
+  font-size:1.7rem;
+  background-color:#0eb582;
+  color:#fff;
+  margin-right:.3rem;
+  text-align:center;
+}
+
+footer .box-container .box .share a:hover{
+  background-color:#444;
+}
+
+footer .box-container .box .link{
+  font-size:1.7rem;
+  line-height:2;
+  color:#777;
+  padding:.5rem 0;
+  display:block;
+}
+
+footer .box-container .box .link:hover{
+  color:#0eb582;
+  text-decoration:underline;
+}
+
+footer .box-container .box p{
+  font-size:1.5rem;
+  line-height:2;
+  color:#777;
+  padding:1rem 0;
+}
+
+footer .box-container .box .email{
+  width:80%;
+  padding:1.2rem 1.4rem;
+  font-size:1.7rem;
+  border:0.1rem solid #0eb582;
+  border-radius:5px;
+}
+
+footer .credit{
+  text-align:center;
+  margin-top:4rem;
+  padding:4.6rem 0;
+  font-size:2rem;
+  text-transform:capitalize;
+  color:#444;
+  border-top:.1rem solid #0eb582;
+}
+
+footer .credit span{
+  color:#0eb582;
+}
